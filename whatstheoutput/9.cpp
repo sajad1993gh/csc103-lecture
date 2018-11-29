@@ -21,3 +21,5 @@ int main()
 	 * See the "traces" directory. */
 	return 0;
 }
+
+//Ans: 7

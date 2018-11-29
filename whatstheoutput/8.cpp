@@ -1,6 +1,6 @@
 #include <iostream>
 using std::cout;
-
+//Study this!
 void f(int m, int n)
 {
 	if (n <= 0 || m <= 0) return;
@@ -12,7 +12,7 @@ void f(int m, int n)
 	for (size_t i = 0; i < m; i++) {
 		cout << "-_-";
 	}
-	cout << "\n";
+	cout << "\n\n";
 	f(n,m-1);
 }
 

@@ -18,11 +18,11 @@ int main()
 	int& x = *p; /* this is called *aliasing* */
 	printf("x == %i\n",x);
 	int A[10];
-	// int A[x];
+	//int A[x];
 	/* TODO: uncomment the above line (note the non-constant array size)
 	 * and see which compiler errors you get.  NOTE: if you don't compile
 	 * with the makefile, it will silently do some dynamic memory alloacation
-	 * behind the scenes. */
+	 * behind the scenes. */// Error: ISO C++ forbids variable length array int A[x] .
 	cout << A << "\n";
 	/* once you're done with dynamically allocated memory, give it back to the
 	 * system using delete: */

@@ -10,7 +10,16 @@ using std::endl;
  * have to). */
 int xgcd(int a, int b, int& x, int& y)
 {
-	return 1;
+	if(b==0){
+		x=1;
+		y=0;
+		return a;
+	}
+	int q=a/b, r=a%b;
+	int d= xgcd(b, r, xx, yy);
+	x=xx;
+	y=xx-q*yy;
+	return d;
 }
 
 void xgcdTest()

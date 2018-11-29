@@ -56,7 +56,7 @@ void pwdcheck() {
 
 /* TODO: read this:
  * HOW TO AVOID SUCH SECURITY ISSUES
- * 
+ *
  * Usually, these stem from using C string manipulation routines like `strcpy`
  * on fixed length buffers allocated on the runtime stack.  In general, you
  * should *never* do this.  Also, you should always prefer functions like

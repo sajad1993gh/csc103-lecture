@@ -15,8 +15,8 @@ set<set<int>> powerset(const set<int>& S)
 	}
 	/* now we assume powerset works on any input of smaller
 	 * size than S (of fewer elements). */
-	set<int> Sp(S); /* make S' a copy of S */
-	int x = *Sp.begin();
+	set<int> Sp(S); /* make S', or Sp,  a copy of S */
+	int x = *Sp.begin(); // Because Sp is a set and Sp.begin is an iterator
 	/* remove x from S': */
 	Sp.erase(x); /* now S' = S\{x} */
 	set<set<int>> T = powerset(Sp);
