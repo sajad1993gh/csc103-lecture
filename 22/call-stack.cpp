@@ -73,7 +73,7 @@ void pwdcheck() {
  * works, run `info gcc` and search for it, or search for "stack canaries"
  * using your favorite search engine.
  * */
-
+//DONE
 /* TODO: (only if you are feeling REALLY adventurous...) generate the assembly
  * file for your program using
  * $ make call-stack.s
