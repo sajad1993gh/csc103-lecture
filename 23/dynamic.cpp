@@ -12,6 +12,9 @@ int main()
 	 * 2. marks the memory as being in use by your program.
 	 * 3. gives you a pointer to the newly allocated block of memory.
 	 * */
+	//NOTE::: A version for array:
+	//int* p= new int[5]
+	//p[i]=..... storing values in it
 	/* store 17 in it: */
 	*p = 17;
 	/* give it a more convenient name if you want: */
@@ -26,7 +29,7 @@ int main()
 	cout << A << "\n";
 	/* once you're done with dynamically allocated memory, give it back to the
 	 * system using delete: */
-	delete p;
+	delete p; // NOTE::: if youre deleting an array: delete[] p;
 	/* NOTE: when your program ends, all memory resources are freed, but it is
 	 * good practice to delete whatever you allocate. */
 	return 0;
