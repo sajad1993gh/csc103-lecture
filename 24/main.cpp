@@ -14,6 +14,7 @@ int main()
 	return 0;
 }
 
-/* TODO: if you have the book, read chapter 5. */
+/* TODO: if you have the book, read chapter 5. */ //Read the UCLA notes
 /* TODO: try to make a similar class for another shape (say a circle),
  * and try * to refer back to this example as little as possible. */
+//Will do

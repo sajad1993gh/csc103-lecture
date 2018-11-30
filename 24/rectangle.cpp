@@ -1,4 +1,5 @@
-/* implementation of rectangle */
+/* implementation of rectangle */ //Defining the functions mentioned in the class rectangle
+
 #include "rectangle.h"
 
 double rectangle::area()
