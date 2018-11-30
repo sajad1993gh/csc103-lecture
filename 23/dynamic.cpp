@@ -33,7 +33,7 @@ int main()
 	/* NOTE: when your program ends, all memory resources are freed, but it is
 	 * good practice to delete whatever you allocate. */
 	return 0;
-	/* TODO: understand why you can't resize a static array like A above. */
+	/* TODO: understand why you can't resize a static array like A above. */ //Kind of ?
 }
 
-/* TODO: read l4.pdf if you haven't already. */
+/* TODO: read l4.pdf if you haven't already. */ //Done
