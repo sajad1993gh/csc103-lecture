@@ -16,7 +16,7 @@ int main()
 	*p = 17;
 	/* give it a more convenient name if you want: */
 	int& x = *p; /* this is called *aliasing* */
-	printf("x == %i\n",x);
+	printf("x == %i\n",x); //c version of cout<<"x=="<<x<<"\n";
 	int A[10];
 	//int A[x];
 	/* TODO: uncomment the above line (note the non-constant array size)
