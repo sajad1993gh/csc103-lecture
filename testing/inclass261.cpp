@@ -20,3 +20,13 @@ vector::~vector()
 {
   delete[] data;
 }
+
+vector::vector(const vector& V)
+{
+  //NOTE: Dont do this ?!
+  this -> size = V.size;
+  this -> capacity = V.capacity;
+  this ->data = V.data;
+}
+
+//read and sudy the lecture .... 26
