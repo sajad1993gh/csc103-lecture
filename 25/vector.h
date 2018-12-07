@@ -12,8 +12,8 @@ public:
 	/* important stuff: *every* class that uses dynamic
 	 * memory should implement the following: */
 	/* (1) constructor and copy constructor. */
-	vector2(size_t initCapacity = 16);
-	vector2(const vector2& V); /* this is the copy constructor.
+	vector(size_t initCapacity = 16);
+	vector(const vector& V); /* this is the copy constructor.
 	    it will be called automatically when you pass vectors
 		by value, as well as returning vectors by value, and
 		possibly in other situations with intermediate rvalues. */
@@ -21,10 +21,10 @@ public:
 	 * in a consistent state. */
 	/* (2) Destructor. This is to free any dynamically allocated
 	 * memory when the object goes out of scope or is destroyed. */
-	~vector2();
+	~vector();
 	/* (3) assignment operator */
-	vector2& operator=(vector2 V);
-	/* NOTE: return type is vector2 so we can do stuff like a = b = c; */
+	vector& operator=(vector V);
+	/* NOTE: return type is vector so we can do stuff like a = b = c; */
 private:
 	/* "under the hood" stuff.  can only be accessed by other member
 	 * functions.  Prevents users of our vector class from putting the

@@ -8,6 +8,7 @@
  * that declares a vector and calls some of these functions.  You will
  * also need to either (a) make the data array temporarily public, or
  * (b) implment the operator[] so you can at least read the elements... */
+ //READ THE FINAL VERSION AND PRACTICE::::
 
 void vector::pop_back()
 {
@@ -20,3 +21,4 @@ void vector::push_back(int x)
 	/* assuming capacity is large enough: */
 	data[size++] = x;
 }
+
