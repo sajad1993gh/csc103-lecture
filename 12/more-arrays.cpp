@@ -12,10 +12,18 @@ using std::endl;
  * to represent it.  Let's work over integers.  */
 int polyEval(int* a, size_t d, int x)
 {
+
 	/* TODO: write this.  Try to do it without looking much at the
 	 * notes from lecture.
 	 * */
-	return 0;
+	int sum=0;
+	int powxi= 1;
+	for(int i=0; i<=d ; i++){
+		// old version: sum += a[i] * pow(x,i);
+		sum+= a[i] * powxi ;
+		powxi *=x ;
+	}
+	return sum;
 }
 /* TODO: Think about what changes you would make to the above in
  * order to use vectors instead of plain arrays.  At least write
@@ -24,6 +32,14 @@ int polyEval(int* a, size_t d, int x)
 /* TODO: (challenge problem!)  Try re-write the polyEval function
  * so that it performs only one multiplication in each iteration of
  * the loop (and some small constant number of additions).  */
+int hornerEval(int a[], size_t d, int x)
+{
+	int sum=a[d];
+	for(int i=1; i<=d; i++){
+		sum = (sum*x + a[d-i]);
+	}
+	return sum;
+}
 
 /* TODO: write a function that takes an array, and its size, and applies
  * a random permutation to the array.  For random number generation, use
@@ -37,6 +53,14 @@ int polyEval(int* a, size_t d, int x)
 
 void randPerm(int* A, size_t n)
 {
+	int x=rand();
+	srand(time(0));
+	for(int i=0; i<n; i++){
+	int temp=A[i];
+	A[i]= A[rand()% (i+1)];
+	A[rand()% (i+1)]=temp;
+
+	}
 }
 
 int main() {
@@ -45,7 +69,14 @@ int main() {
 	int x;
 	cin >> x;
 	cout << "f(" << x << ") = " << polyEval(A,2,x) << endl;
+	cout << "f(" << x << ") = " << hornerEval(A,2,x) << endl;
+	cout<< endl;
 
+	randPerm(A,3);
+	for(int i=0; i<3; i++){
+		cout<<A[i]<< ", ";
+	}
+	cout<<endl;
 
 	/* NOTE: you will need random numbers of course for the above exercise.
 	 * Here is how you can get them: */
@@ -55,5 +86,6 @@ int main() {
 	// like this:
 	srand(time(0));
 	// now these will be different:
-	cout << "more random numbers: " << rand() << endl << rand() << endl;
+	cout << "more random numbers: " << rand() << ",  " << rand()<< "\n" << endl;
+
 }

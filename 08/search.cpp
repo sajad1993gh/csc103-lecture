@@ -62,11 +62,12 @@ bool binary_search(vector<int> V, int x)
 	/* NOTE: if low and high were of size_t (which is unsigned), the above
 	 * code could produce incorrect results (and likely crash!).
 	 * TODO: change the types to size_t, and find inputs which would crash
-	 * the program.
+	 * the program. errors with decimal point numbers!
+
 	 * TODO: make a new version of binary_search which uses size_t for low
 	 * and high, but produces correct results in the above situation.
 	 * NOTE: there is also a possibility of incorrect results on very large
-	 * arrays.
+	 * arrays. I changed int n(input) to double and it works now.
 	 * */
 	return false;
 }

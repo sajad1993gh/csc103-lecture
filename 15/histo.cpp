@@ -13,7 +13,8 @@ int main()
 	while (cin >> s) M[s] += '#';
 	/* now just print M.  Have to use iterators... */
 	for (map<string,string>::iterator i = M.begin(); i != M.end(); i++) {
-		cout << (*i).first << ": " << (*i).second << "\n";
+		cout << (*i).first /*index*/
+		<< ": " << (*i).second /*value*/ << "\n";
 	}
 	/* NOTE: *i is of datatype pair<string,int> */
 	return 0;

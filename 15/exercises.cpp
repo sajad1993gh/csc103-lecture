@@ -29,26 +29,56 @@ using namespace std;
 
 int main()
  {
+ /*vector<string> s;
+ vector<int> j;
 
+ string a;
+  while(cin>>a){
+   s.push_back(a);
+  }
+  int size= s.size();
+  for(int i=0; i<size; i++){
+   j.push_back(1);
+  }
+   for(int i=0; i<s.size(); i++){
+    if(s[i]==a){
+     j[i]++;
+   }
+  }
+
+  cout<< "\n";
+  for(int i=0; i<s.size(); i++){
+   cout<< s[i] << " ";
+  }
+  cout<< "\n";
+  for(int i=0; i<j.size(); i++){
+   cout<< j[i] << " ";
+  }
+  cout<< "\n";
+  */
   string s;
   string a;
   vector<string> F;
   vector<int> count;
 
-
-  while(cin>>s){
+   while(cin>>s){
    if(s!=a){
-    F.push_back(s);
-    count.push_back(1);
-      }
-    else count[1]++;
-    a=s;
-     }
+   F.push_back(s);
+   count.push_back(1);
+   }
+   else count[1]++;
+   s=a;
+  }
+
 
       cout<< "\n"; //just printing:
         for(int i=0; i<F.size(); i++){
+         if(F[i]==F[i+1]){
+          F.pop_back();
+          count.pop_back();
          cout<< F[i] << ": " << count[i] << "  ";
-        }
+         }
+         }
       cout<< "\n";
 
 return 0;

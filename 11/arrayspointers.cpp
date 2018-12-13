@@ -1,10 +1,12 @@
-
 /* arrays and pointers. */
 #include <iostream>
 using std::cin;
 using std::cout;
 using std::endl;
-
+void swap(int *q1, int* q2);
+void shift(int* A /* the array */,
+		size_t len /* #elements of A */,
+		size_t n /* shift amount */);
 int main() {
 	/* ARRAYS: OVERVIEW
 	 * Arrays in C/C++: kind of like a "dumb" version of std::vector.
@@ -53,7 +55,7 @@ int main() {
 	/* and then try to write to that memory cell, like this: */
 	*p = 17;
 	/* TODO: change the above "#if 0" to "#if 1", compile, run, and take
-	 * note of the error.  Sadly, it won't be the last time you see it... */
+	 * note of the error.  Sadly, it won't be the last time you see it...  SEGMENTATION FAULT I think because the pointer did get declared twice with #if 1*/
 	#endif
 
 	/* 2. initialization via "address-of"
@@ -69,33 +71,25 @@ int main() {
 	/* 3. read/write using "dereference operator" */
 
 	cout << "this is what's at the address stored in p: " << *p  << endl;
-
-	cout<<"\nCompare the following three:"<<endl;
-	(*p)++; /* NOTE: parens are actually important*///address wont change
+	(*p)++; /* NOTE: parens are actually important. */
 	cout << "p == " << p << "\tx == " << x << endl;
-
-	(*p++);
-	cout << "p == " << p << "\tx == " << x << endl;
-
-	*(p++);
-	cout << "p == " << p << "\tx == " << x << endl<<endl;
-
 
 	/* TODO: think carefully (and draw pictures!), and see if you can predict
 	 * the output of the following code before you run it: */
 	int y = 23;
 	int* q = &y;
+	cout<< "\n" ;
 	cout << "p == " << p << "\tx == " << x << endl;
 	cout << "q == " << q << "\ty == " << y << endl;
 	cout << "::: setting p = q;\n";
 	p = q;
 	(*q)++;
-	cout << "p == " << p << "\tx == " << x << endl;
-	cout << "q == " << q << "\ty == " << y << endl;
+	cout << "p == " << p << "\t *p == "<< *p << "\tx == " << x << endl;
+	cout << "q == " << q << "\t *q == "<< *q << "\ty == " << y << endl;
 
 	/* Back to arrays for a moment:  what does the bracket notation (A[i])
 	 * actually mean?  It is simply an addition of pointers, followed by
-	 * a dereference: A[i] is the same as *(A+i) as it turns out.  There are
+	 * a dereference: A[i] == *(A+i) as it turns out.  There are
 	 * even funny consequences of this -- instead of A[i], you can instead
 	 * write i[A] (but I don't recommend it!) */
 	char B[10];
@@ -103,14 +97,41 @@ int main() {
 		B[i] = 'a' + i;
 	}
 	for (size_t i = 0; i < 10; i++) {
-		/* B[i] == *(B+i) == *(i+B) ==? i[B] */
+		/* B[i] == *(B+i) == *(i+B) == i[B] */
 		cout << i << "[B] == " << i[B] << endl;
 	}
 
-	return 0;
+
 	/* TODO: declare another pointer (say p2) to a character, initialize it
 	 * just as we did before, and print out (p+i) and then (p2+i) for small
 	 * values of i. Notice that the difference in memory addresses changes. */
+	cout<< "TODOs:\n\n" ;
+	char h='h';
+	char l='l';
+	char *p1= &h;
+	char *p2= &l;
+	cout<< p1 << "   "<<*p1<<"   " << p2<< "   " <<*p2 << "\n"<< (p1+3)<< "     " << *(p1+3) << "    " << (p2+3)<<"    "<<*(p2+3) << "\n TODO2:"<<endl;
+
+	int a=1;
+	int b=2;
+	int *z1= &a;
+	int *z2= &b;
+	swap(z1, z2);
+	cout<< endl;
+	//shift test
+	int array[]={1,2,3,4,5};
+	int* point= array;
+
+	size_t len=5;
+	size_t n=2;
+	shift(point,len,n);
+	for(int i=0; i<len; i++){
+		cout<<array[i]<< endl;
+	}
+	cout<< endl;
+
+
+	return 0;
 }
 
 /* TODO: write a function that returns void, and takes two
@@ -119,12 +140,18 @@ int main() {
  * what I'm asking for...
  * */
 
-/* TODO: if the type of p is int*, can you guess what the
- * type of &p would be? */
+void swap(int *q1, int* q2){
+		cout<< *q1 << "\t" << *q2 <<endl;
+		int* temp= q1;
+		q1=q2;
+		q2=temp;
+		cout<< *q1 << "\t" << *q2 <<endl;
+}
 
-void shift(int* A /* the array */,
-		size_t len /* #elements of A */,
-		size_t n /* shift amount */);
+
+/* TODO: if the type of p is int*, can you guess what the
+ * type of &p would be?  ANS:It would be int ?*/
+
 /* TODO: write a function that performs a "circular shift" on
  * an array of integers.  For example, if the input array
  * contained 0,1,2,3,4 and we shifted by 2, the new array would
@@ -137,3 +164,31 @@ void shift(int* A /* the array */,
  * take n*len steps.  You should be able to do this in c*len steps
  * for some small constant c, not depending on len.
  * */
+
+void shift(int* A /* the array */,
+		size_t len /* #elements of A */,
+		size_t n /* shift amount */)
+{
+		for(size_t i=0; i<len/2 ; i++){
+			int temp=A[i];
+			A[i]=A[len-i-1];
+			A[len-i-1]=temp;
+		}
+		for(size_t i=0; i<=((n-1)/2) ;i++){
+			int temp=A[i];
+			A[i]=A[n-1-i];
+			A[n-1-i]=temp;
+		}
+		int z=1;
+		for(size_t i=n; i<((len-n/2)+n); i++){
+			int temp=A[i];
+			A[i]=A[len-z];
+			A[len-z]=temp;
+			z++;
+		}
+
+
+
+}
+
+

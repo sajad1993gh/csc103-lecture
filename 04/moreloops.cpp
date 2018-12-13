@@ -1,4 +1,4 @@
-/* More about loops.  */
+/* Extra to the stuff he talked in class . More about loops.  */
 
 #include <iostream>
 using std::cin;
@@ -51,25 +51,26 @@ int main()
 	 * 3. Loop through the input and make sure the meaning of each of your
 	 *    variables is preserved at the end of each iteration of the loop.
 	 * 4. Finally, print the results.
-	 * */
+	 * */ Done
 
 	/* TODO: brute force test for perfect cubes.  Check if
-	 * n = k^3 for some integer k.  */
+	 * n = k^3 for some integer k.  */ Done in TODO2.cpp
 
-	/* TODO: write a loop that prints the sum of the first n odd cubes. */
+	/* TODO: write a loop that prints the sum of the first n odd cubes. */Done in TODO3.cpp
 
 	/* TODO: write code that gets an integer n from the user and prints out
-	 * the n-th term of the fibonacci sequence. */
+	 * the n-th term of the fibonacci sequence. */ Done in TODO4.cpp
 
 	/* TODO: a slight generalization of an earlier exercise: for integers
 	 * n and k, determine the largest power of k that divides n.
 	 * NOTE: see if you can formalize the invariant you used to solve this.
-	 * */
+	 * */Done in TODO5.cpp
 
 	/* TODO: write a program that reads (arbitrarily many) integers from
 	 * stdin and outputs the *second* smallest one.  NOTE: you don't need
 	 * to store many numbers (all at once, that is) to do this!  You'll
-	 * only need a few integer variables.  Think about invariants! */
+	 * only need a few integer variables.  Think about invariants! */ Done in TODO6.cpp
+
 
 	return 0;
 }

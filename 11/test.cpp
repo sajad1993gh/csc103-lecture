@@ -18,14 +18,14 @@ int main(void)
 	int*p = A;
 	cout << p << "\n";
 	cout << A << "\n";
-	cout << &A[0] << "\n";
+	cout << &A[0] << "\n"; // *** memory address
 	/* NOTE: to *read* from a memory address, use the star
 	 * operator (*) (also called "dereference" operator)
 	 * */
-	cout << *p << "\n"; /* prints value of A[0] */
-	cout << *(p+1) << "\n";
-	cout << *(A+1) << "\n";
-	cout << A[1] << "\n";
+	cout << *p << "\n"; /*** prints value of A[0] */
+	cout << *(p+1) << "\n"; //these 3
+	cout << *(A+1) << "\n"; //are
+	cout << A[1] << "\n";		//equal
 	cout << *(p+2) << "\n";
 	cout << *(A+2) << "\n";
 	cout << A[2] << "\n";

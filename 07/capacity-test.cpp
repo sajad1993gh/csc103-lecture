@@ -23,7 +23,30 @@ void test() {
 	}
 	/* TODO: figure out the pattern / rule for how capacity is
 	 * updated, and then see if you can figure out *why* they chose
-	 * to use that pattern... */
+	 * to use that pattern...
+	which is this:
+	0
+	1
+	2
+	4
+	4
+	8
+	8
+	8
+	8
+	16
+	16
+	16
+	16
+	16
+	16
+	16
+	16
+	32
+	32
+	32
+	*/
+
 }
 
 int main(void)

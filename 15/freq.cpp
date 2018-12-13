@@ -5,6 +5,8 @@ using std::cin;
 using std::map;
 #include <string>
 using std::string;
+#include<vector>
+using std::vector;
 
 int main()
 {
@@ -17,5 +19,7 @@ int main()
 			    (*i).second /* value */ << "\n";
 	}
 	/* NOTE: *i is of datatype pair<string,int> */
+
+
 	return 0;
 }

@@ -19,7 +19,7 @@ int main()
 				 0 as done here, running './a.out && echo ":D"' will execute
 				 the echo and you will see ':D' at the end of the output.
 				 If you return anything else (e.g. 1) only the first command
-				 will happen.  A more useful example: compile and run your
+				 will happen.  A more usefu example: compile and run your
 				 program only if compilation succeeded:
 				 $ g++ datatypes.cpp && ./a.out
 				 */

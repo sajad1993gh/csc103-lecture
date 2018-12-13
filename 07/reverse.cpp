@@ -27,7 +27,7 @@ int main()
 	 * loop going from (i=0; i<V.size(); i++) which prints in reverse.
 	 * (Not hard, but good practice.)
 	 * */
-	cout << "number of bytes for int: " << sizeof(int) << "\n";
+	cout << "number of bytes for int/double: " << sizeof(int) << "  /  " << sizeof(double) << "\n";
 	return 0;
 }
 

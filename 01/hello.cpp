@@ -1,4 +1,4 @@
-#include <iostream>
+open note#include <iostream>
 /* "iostream" is just a file, and #include just copies and pastes it
  * into our program.  iostream contains some facilities to make input
  * and output easy for us.  E.g. "std::cout". */
@@ -6,12 +6,13 @@
 /* main is where your program begins. */
 int main()
 {
-	/* TODO: why do you need the quotes?  Find out what happens if you
+	/* TODO: why cout? Find out what happens if you
 	 * take them out.  And what is the '\n' for?  Do some experimenting
 	 * to find out.  */
 	std::cout << "hello class.\n";
 	return 0;
 }
+
 
 /* TODO: follow the tutorial on "building on the command line" from our
  * homepage.  Then just spend some time experimenting and see what you
