@@ -1,3 +1,4 @@
+
 /* arrays and pointers. */
 #include <iostream>
 using std::cin;
@@ -68,8 +69,17 @@ int main() {
 	/* 3. read/write using "dereference operator" */
 
 	cout << "this is what's at the address stored in p: " << *p  << endl;
-	(*p)++; /* NOTE: parens are actually important. */
+
+	cout<<"\nCompare the following three:"<<endl;
+	(*p)++; /* NOTE: parens are actually important*///address wont change
 	cout << "p == " << p << "\tx == " << x << endl;
+
+	(*p++);
+	cout << "p == " << p << "\tx == " << x << endl;
+
+	*(p++);
+	cout << "p == " << p << "\tx == " << x << endl<<endl;
+
 
 	/* TODO: think carefully (and draw pictures!), and see if you can predict
 	 * the output of the following code before you run it: */

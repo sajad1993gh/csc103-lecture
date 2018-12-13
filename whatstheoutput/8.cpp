@@ -4,7 +4,7 @@ using std::cout;
 void f(int m, int n)
 {
 	if (n <= 0 || m <= 0) return;
-	f(n-1,m);
+	f(n-1,m); // here, output from the end to beginning
 	for (size_t i = 0; i < n; i++) {
 		cout << "O_O";
 	}
@@ -13,7 +13,7 @@ void f(int m, int n)
 		cout << "-_-";
 	}
 	cout << "\n\n";
-	f(n,m-1);
+	f(n,m-1); //here, output from the beginning to end
 }
 
 int main()
