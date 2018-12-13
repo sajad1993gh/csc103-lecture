@@ -9,10 +9,12 @@ int main()
 {
 	int x = 9;
 	while (x > 0) {
-		if (x > 6 || x % 5)
+		if (x > 6 || x % 5) // meaning x%5==true !=0
 			cout << "x == " << x << "\n";
 		x -= 2;
 	}
 	cout << "x == " << x << "\n";
 	return 0;
 }
+
+//9,7,3,1,-1

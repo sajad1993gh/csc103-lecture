@@ -9,12 +9,12 @@ using std::endl;
 int main() {
     int x = 10, y = 3;
     double d = 4, e = 2;
-    cout << --x << endl;
-    cout << x-- << endl;
-    cout << y/x << endl;
+    cout << --x << endl; //9
+    cout << x-- << endl;  //9
+    cout << y/x << endl; //0
     y = e;
-    cout << y/x << endl;
-    cout << x%y << endl;
-    cout << (x-d)/y << endl;
+    cout << y/x << endl;  //0
+    cout << x%y << endl;  //0
+    cout << (x-d)/y << endl;  //2
     return 0;
 }
