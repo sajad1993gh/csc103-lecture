@@ -21,3 +21,5 @@ int main()
 	f(2,2);
 	return 0;
 }
+//NOTE:: if recursion is first, recursion needs to be done first, so cout everything from the end to beginning
+//if recursion is last in the function, cout everything from the beginning to end.

@@ -21,7 +21,7 @@ int main(void)
 	cout << "x  == " << x << "\n*p == " << *p << "\n";
 	cout << "y  == " << y << "\n*q == " << *q << "\n";
 	p = q;
-	cout << "p  == " << p << "\n&x == " << &x << "\n";
+	cout << "p  == " << p << "\n&x == " << &x << "\n"; //&x stays the same address
 	cout << "q  == " << q << "\n&y == " << &y << "\n";
 	cout << "x  == " << x << "\n*p == " << *p << "\n";
 	cout << "y  == " << y << "\n*q == " << *q << "\n";
