@@ -9,11 +9,11 @@ using std::endl;
 int main()
 {
     int A[5] = {0,2,4,6,8};
-    cout << A[1] << endl;
-    cout << ++A[2] << endl;
-    cout << *A << endl;
+    cout << A[1] << endl; //2
+    cout << ++A[2] << endl; //5
+    cout << *A << endl; //0
     int* p = &A[3];
-    cout << *(p--) << endl;
-    cout << *p << endl;
+    cout << *(p--) << endl; //6
+    cout << *p << endl; //5
     return 0;
 }
