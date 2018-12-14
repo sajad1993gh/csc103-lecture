@@ -2,13 +2,13 @@
 
 #include "circle.h"
 
-double circle::area()
+double circle::perimeter()
 {
   return 2*3.14*r;
 
 }
 
-double circle::perimeter()
+double circle::area()
 {
   return 3.14*r*r;
 
