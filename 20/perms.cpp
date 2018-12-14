@@ -30,9 +30,9 @@ vector<vector<int> > perms(vector<int> V)
 		/* Here's an answer, protected with rot13 so as not to spoil it : ) */
 		#if 1
 		int last = V[i];
-		cout << "Vlast = " << V[i] << "\n";
+		//cout << "Vlast = " << V[i] << "\n";
 		V[i] = V[V.size()-1];
-		cout  <<"V[i] = " << V[i] << "\n";
+		//cout  <<"V[i] = " << V[i] << "\n";
 		/* now exclude the last element, compute all permutations,
 		 * then stick last element back on. */
 		V.pop_back();
@@ -48,7 +48,7 @@ vector<vector<int> > perms(vector<int> V)
 		V.push_back(V[i]);
 		V[i] = last;
 
-		cout << "V[i2] = " << V[i] << "\nV[last] = " << V[V.size()-1] << "\n";
+		//cout << "V[i2] = " << V[i] << "\nV[last] = " << V[V.size()-1] << "\n";
 		#endif
 		/* If you want to see the answer: in vim, go to visual mode and select
 		 * all the nonsense above between the #if..#endif and then type "g?".
