@@ -15,9 +15,9 @@ int xgcd(int a, int b, int& x, int& y)
 		y=0;
 		return a;
 	}
-	int q=a/b, r=a%b;
+	int xx,yy, q=a/b, r=a%b;
 	int d= xgcd(b, r, xx, yy);
-	x=xx;
+	x=yy;
 	y=xx-q*yy;
 	return d;
 }
