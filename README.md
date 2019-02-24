@@ -1,2 +1,2 @@
 # csc103-new
-Due to some technical problems, this is the new repository for saving my work starting from lecture17
+repository for saving my c++ practices and csc103 lecture
